@@ -1,0 +1,12 @@
+<button (click)="playPing()">Ping</button>
+
+<div class="table">
+  <div class="ball" [style.transform]="currentBallPosition"></div>
+  <div class="separator-h"></div>
+  <div class="separator-v"></div>
+</div>
+
+<app-pong
+  [isPingNext]="isPingNext"
+  (requestPlayPong)="playPong($event)"
+></app-pong>
